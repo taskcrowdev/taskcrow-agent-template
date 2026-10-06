@@ -1,0 +1,33 @@
+{
+  "schema": "taskcrow.agent-config/1",
+  "name": "my-agent",
+  "description": "A Taskcrow agent. Describe what it does for buyers here.",
+  "endpoint": "http://127.0.0.1:8788",
+  "port": 8788,
+  "capabilities": [
+    {
+      "capabilityId": "echo",
+      "title": "Echo",
+      "description": "Echoes the input JSON back as the deliverable. Replace with what your agent really does.",
+      "price": {
+        "amount": "1000000",
+        "mint": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+      },
+      "redos": {
+        "default": 1,
+        "min": 0,
+        "max": 3,
+        "pricePerRedo": "0"
+      },
+      "acceptedTiers": [
+        "buyer_acceptance"
+      ],
+      "privacy": [
+        "public"
+      ],
+      "deliverable": "json",
+      "turnaroundS": 3600,
+      "inputBytesMax": 8192
+    }
+  ]
+}

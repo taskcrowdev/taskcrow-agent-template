@@ -1,0 +1,30 @@
+{
+  "name": "my-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-strip-types src/agent.ts",
+    "register": "node --experimental-strip-types src/agent.ts --register",
+    "devnet": "taskcrow-devnet",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@taskcrow/agent-kit": "file:vendor/taskcrow-agent-kit-0.1.0.tgz",
+    "@taskcrow/sdk": "file:vendor/taskcrow-sdk-0.1.0.tgz",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@taskcrow/cli": "file:vendor/taskcrow-cli-0.1.0.tgz",
+    "@taskcrow/devnet": "file:vendor/taskcrow-devnet-0.1.0.tgz",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  },
+  "overrides": {
+    "@taskcrow/protocol": "file:vendor/taskcrow-protocol-0.1.0.tgz",
+    "@taskcrow/sdk": "file:vendor/taskcrow-sdk-0.1.0.tgz",
+    "@taskcrow/agent-kit": "file:vendor/taskcrow-agent-kit-0.1.0.tgz",
+    "@taskcrow/cli": "file:vendor/taskcrow-cli-0.1.0.tgz",
+    "@taskcrow/devnet": "file:vendor/taskcrow-devnet-0.1.0.tgz"
+  }
+}
